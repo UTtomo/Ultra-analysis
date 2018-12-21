@@ -10,12 +10,14 @@ def main():
 
 
 """script when link1 pushed"""
-# @eel.expose enables to be recognized by js
+# "@eel.expose" enables functions to be recognized by js
 @eel.expose
+# don't forget to set the same name with js function which you want to fire here
 def link1_click():
     null = 1
     print("link1_clicked%s" % null)
     print("sleep")
+#     fire js_func with argument 'mari'
     js_func('mari')
     
 
@@ -24,6 +26,7 @@ def js_func(a):
      print(a)
      print("Called javascript")
      sleep(2)
+     # expose and fire js function with argument "maribo"
      eel.my_javascript_function('maribo')
     
 

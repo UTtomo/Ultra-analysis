@@ -16,9 +16,10 @@
 		window.onload = function() {
 			caution = document.getElementById("caution");
 		}
-		
+		// expose my_javascript_function to python script for interaction
      eel.expose(my_javascript_function);
-     
+		 
+		 // function contents is to show "hello maribo" in console that derived from main.py
      function my_javascript_function(a){
 		   console.log("hello "+a);
 			 
