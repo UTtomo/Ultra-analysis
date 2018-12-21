@@ -14,10 +14,7 @@ def main():
 def link1_click():
     null = 1
     print("link1_clicked%s" % null)
-        print("sleep")
-    sleep(1)
-    print("Calling javascript")
-   
+
 
 
 """script when link2 pushed"""
