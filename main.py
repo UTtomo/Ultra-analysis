@@ -4,6 +4,7 @@ from time import sleep
 def main():
     # load web file
     eel.init("web")
+    
     eel.start("main.html")
 
 
@@ -14,8 +15,17 @@ def main():
 def link1_click():
     null = 1
     print("link1_clicked%s" % null)
+    print("sleep")
+    js_func('mari')
+    
 
-
+@eel.expose
+def js_func(a):
+     print(a)
+     print("Called javascript")
+     sleep(2)
+     eel.my_javascript_function('maribo')
+    
 
 """script when link2 pushed"""
 @eel.expose
