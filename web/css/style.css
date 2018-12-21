@@ -1,0 +1,44 @@
+<style>
+body{
+  font-size: 16px;
+  background-color: rgb(20,20,20);
+}
+header{
+  text-align: center;
+  font-size: 30px;
+  color: rgb(200,200,200);
+  background-color: rgb(50,50,50);
+}
+footer{
+  background-color: rgb(50,50,50);
+}
+
+section{
+  background-color: rgb(50,50,50);
+}
+.container{
+    background-color: rgb(50,50,50);
+    text-align: center;
+}
+
+/* Home page */
+.a_row{
+display: inline-block;
+vertical-align: bottom;
+}
+
+.a_row h2{
+  color: rgb(234,174,264);
+  margin-bottom: 1em;
+}
+
+.frame img{
+  border-radius: 10px;
+}
+
+.cd{
+  font-size: 100px;
+  color: rgb(227, 36, 36);
+}
+
+</style>

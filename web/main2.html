@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Eel app</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="/eel.js"></script>
+	<script type="text/javascript">
+
+	// run a python script with asynchronously
+	function link1Click() {
+		eel.link1_click();
+	}
+
+	async function link2Click() {
+		let val = await eel.link2_click("args-test")();
+		alert(val);
+	}
+	</script>
+</head>
+
+<body>
+	<header> Ultrasonic Aanalyzer<br>
+	</header>
+
+
+	<a href="#" onclick="link1Click()">Link10000</a>
+	<br>
+	<a href="#" onclick="link2Click()">Link2</a><br>
+
+
+超音波印加時間　<input type="text" value="５" name="text">　秒 <br>
+試験材　<input type="text" value="high tensile strength steel" name="text"> <br>
+備考　<input type="text" value="" name="text"> <br>
+
+<input type="image" src="images/btn.png" width="100" height="30" alt="保存する" value="保存する">
+
+  <footer class="text-center text-muted pu-4">
+  <br>(C) Ultrasonic Analyzer
+</footer>
+
+</body>
+</html>
