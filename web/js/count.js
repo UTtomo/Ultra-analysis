@@ -1,27 +1,35 @@
 (function(){
     'use strict';
  
-    // include timer and start to js from HTML
+    // include timer start, and caution to js from HTML
     var timer = document.getElementById('timer');
     var start = document.getElementById('start');
     var caution = document.getElementById('caution')
 
+    // definition of valuables
     var startTime;
     var timeLeft;
     var timeToCountDown = 5 * 1000;
     var timerId;
+
+    // caution is the ID of "waiting for pushing button". first, you need to expose it. so set visible
+
     caution.style.visibility = "visible";
 
-    // define updateTimer function that write text on the format
+    // define updateTimer function that insert count-timer on the format
     function updateTimer(t) {
+        // get date with Date-method
         var d = new Date(t);
+        // m is a valuable to strage "minutes"
         var m = d.getMinutes();
+        // s is a valuable to strage "seconds"       
         var s = d.getSeconds();
-        console.log(s+1);
+        
+        // overwrite countdown-timer 
         timer.textContent = s+1;
     }
 
-    // define countDown function that count time and return it
+    // define countDown function that calculate time and return the value
     function countDown() {
         
         // conduct function below after 10 mseconds

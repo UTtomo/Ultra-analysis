@@ -1,6 +1,7 @@
 import eel
 from time import sleep
-from home import js_func
+# import js_func from measure file which is located in the same directory 
+from measure import js_func
 
 def main():
     # load web file
@@ -14,10 +15,11 @@ def main():
 @eel.expose
 # don't forget to set the same name with js function which you want to fire here
 def link1_click():
+     # any python script 
     null = 1
     print("link1_clicked%s" % null)
     print("sleep")
-#     fire js_func with argument 'mari'
+#     fire js_func in JS file with argument 'mari'
     js_func('mari')
 
 
@@ -35,6 +37,7 @@ def link2_click(args):
 def link3_click():
     null = 3
     print("link3_clicked%s" % null)
+
 
 if __name__ == '__main__':
      main()
