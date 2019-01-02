@@ -3,10 +3,12 @@ from time import sleep
 # import js_func from measure file which is located in the same directory 
 from measure import js_func
 
+
 def main():
     # load web file
     eel.init("web")  
     eel.start("main.html")
+    
 
 
 
@@ -20,7 +22,7 @@ def link1_click():
     print("link1_clicked%s" % null)
     print("sleep")
 #     fire js_func in JS file with argument 'mari'
-    js_func('mari')
+   
 
 
     
@@ -35,8 +37,10 @@ def link2_click(args):
 
 @eel.expose
 def link3_click():
+    
     null = 3
     print("link3_clicked%s" % null)
+    js_func('mari')
 
 
 if __name__ == '__main__':

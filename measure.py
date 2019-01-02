@@ -32,12 +32,19 @@ def js_func(a):
     adc = mcp_adc.mcp3208( SPI_CE, SPI_SPEED, VREF )
 
     # Get time and date and storage it to "now"
+    today = datetime.date.today()
     now = datetime.datetime.now()
+    
     # insert citycity to City for the test
-    City = 'citycity'
+    City = 'mari'
+
+    if not os.path.exists('python-data/%s' % today):
+            print('This is the first experiment today. New repository coreated %s' % today)
+            os.mkdir('python-data/%s'% today)
+   
 
     # make file whose file name is 
-    fmt_name = "python-data/test_{0:%Y%m%d-%H%M%S}.csv".format(now)
+    fmt_name = "python-data/{0}/test_{1:%Y%m%d-%H%M%S}.csv".format(today,now)
 
     print('start collecting data...')
 
@@ -78,9 +85,9 @@ def js_func(a):
     f.Upload()
 
     print('Completed uploading files')
-    print()
+  
 
     sleep(1)
     # expose and fire js function with argument "maririnrin"
-    eel.my_javascript_function('maririnrin')
+    eel.my_javascript_function('%s' % fmt_name)
     

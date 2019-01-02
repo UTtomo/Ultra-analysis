@@ -7,15 +7,18 @@
 	<script type="text/javascript" src="/eel.js"></script>
 	<script type="text/javascript">
 
-	// run a python script with asynchronously
+	// run a python script asynchronously
 	function link1Click() {
+	
 		eel.link1_click();
+
 	}
 
-	async function link2Click() {
-		let val = await eel.link2_click("args-test")();
-		alert(val);
-	}
+
+	// async function link2Click() {
+	// 	let val = await eel.link2_click("args-test")();
+	// 	alert(val);
+	// }
 	</script>
 </head>
 
@@ -47,7 +50,7 @@
     <div class="a_row">
     <!-- <h2 class="settings">設定</h2> -->
     <!-- <h2 class="info">hogehoge</h2> -->
-    <h2>鈴木研究室</h2>
+    <h2>q研究室</h2>
     <h2>x月y日 hd:ss</h2>
     <div class="frame">
       <a href="settings.html"  onclick="link2Click()"><img src="images/yellow.jpg"></a>
