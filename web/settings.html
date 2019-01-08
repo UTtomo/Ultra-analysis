@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-	<meta charset="UTF-8">
-	<title>Eel app</title>
+    <meta charset="UTF-8">
+    
+    <title>JavaScript text</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-	<script type="text/javascript" src="/eel.js"></script>
-	<script type="text/javascript">
+    <script type="text/javascript" src="/eel.js"></script>
+<script type="text/javascript">
+function dispText(){
 
-	// run a python script with asynchronously
-	function link1Click() {
-		eel.link1_click();
-	}
+	var name1  = document.fm.input_name1.value;
+  var name2  = document.fm.input_name2.value;
+  var name3  = document.fm.input_name3.value;
+  var name4  = document.fm.input_name4.value;
+  var name5  = document.fm.input_name5.value;
 
-	async function link2Click() {
-		let val = await eel.link2_click("args-test")();
-		alert(val);
-	}
-	</script>
+	alert('入力した名前は' + name1 +'と'+ name2  +'と'+ name3 +'と'+ name4 +'と'+ name5+ 'です' );
 
+}
+</script>
 </head>
+
 <body>
 
-<header> Ultrasonic Analyzer <br>
-</header>
+  <header> Ultrasonic Analyzer <br>
+  </header>
 
-<div class="container">
-<pre>
-<form action="http://localhost:8000/cgi-bin/cgiValueTest.py" method="GET">
-  Ultrasonic Activation Time?               <input type="text" name="value" value="5" />  seconds<br>
-  Materials                                 <input type="text" name="value2" value="High Tensile Strength Steel" /><br>
-  Frequency                                 <input type="text" name="value3" value="29.7k"  />  Hz <br>
-  Length of board                           <input type="text" name="value4" value="600" />  mm<br>
-  You can write down something here..       <textarea name="value5" value="" cols="24" rows="4" maxlength="20"></textarea><br>
-  <input type="submit" name="submit" />
-</form>
-<pre>
-</section>
+  <div class="container">
+
+    <form name="fm">
+       
+        Ultrasonic Activation Time?　 　　　　　　<input type="text" name="input_name1">  seconds<br>
+       Materials 　　　　　　　　　　 　<input type="text" name="input_name2"><br>
+       Frequency　　　     　　　　　  　　　　　<input type="text" name="input_name3">　Hz<br>
+        Length of Board　　　　　　 　　　　　<input type="text" name="input_name4">　mm<br>
+       You can write down something here..       <textarea type="text" name="input_name5" cols="24" rows="4" maxlength="20"></textarea><br>
+       <input type="button" value="確認" onclick="dispText()">
+    </form>
+  </div>
+
   <a href="http://localhost:8000/main.html" class="homebtn">Home</a>
   <footer class="text-center text-muted pu-4">
   <br>(C) Ultrasonic Analyzer
