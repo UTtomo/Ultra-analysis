@@ -16,8 +16,8 @@ function dispText(){
   var name4  = document.fm.input_name4.value;
   var name5  = document.fm.input_name5.value;
 
-	alert('入力した名前は' + name1 +'と'+ name2  +'と'+ name3 +'と'+ name4 +'と'+ name5+ 'です' );
-
+	alert('入力した値は' + name1 +'と'+ name2  +'と'+ name3 +'と'+ name4 +'と'+ name5+ 'です' );
+  eel.experiment_data(name1,name2,name3,name4,name5);
 }
 </script>
 </head>
@@ -28,19 +28,21 @@ function dispText(){
   </header>
 
   <div class="container">
-
+    <div class="w-text">
     <form name="fm">
        
-        Ultrasonic Activation Time?　 　　　　　　<input type="text" name="input_name1">  seconds<br>
-       Materials 　　　　　　　　　　 　<input type="text" name="input_name2"><br>
-       Frequency　　　     　　　　　  　　　　　<input type="text" name="input_name3">　Hz<br>
-        Length of Board　　　　　　 　　　　　<input type="text" name="input_name4">　mm<br>
-       You can write down something here..       <textarea type="text" name="input_name5" cols="24" rows="4" maxlength="20"></textarea><br>
-       <input type="button" value="確認" onclick="dispText()">
+        Ultrasonic Activation Time　　　 　　　　　　<input type="text" name="input_name1">  seconds<br>
+       Materials 　　　　　　　　　　　　　　　 　<input type="text" name="input_name2"><br>
+       Frequency　　　　　　　　　　　　　　　　<input type="text" name="input_name3">　Hz<br>
+        Length of Board　　　　 　　　　 　　　　　<input type="text" name="input_name4">　mm<br>
+       You can write down something here.. 　　　　      <textarea type="text" name="input_name5" cols="24" rows="4" maxlength="20"></textarea><br>
+       
     </form>
+    </div>
+    <a href="http://localhost:8000/main.html" class="homebtn" onclick="dispText()">設定終了</a>
   </div>
 
-  <a href="http://localhost:8000/main.html" class="homebtn">Home</a>
+  
   <footer class="text-center text-muted pu-4">
   <br>(C) Ultrasonic Analyzer
 </footer>

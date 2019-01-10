@@ -42,6 +42,7 @@ def link3_click():
     print("link3_clicked%s" % null)
     js_func('mari')
 
+   
 
 if __name__ == '__main__':
      main()
