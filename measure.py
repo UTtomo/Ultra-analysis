@@ -8,7 +8,6 @@ import datetime
 import wiringpi as pi
 import time
 import mcp_adc
-from server import serverUp
 import shutil
 
 def main():
