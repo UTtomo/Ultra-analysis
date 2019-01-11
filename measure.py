@@ -8,6 +8,8 @@ import datetime
 import wiringpi as pi
 import time
 import mcp_adc
+from server import serverUp
+import shutil
 
 def main():
     # load web file
@@ -36,7 +38,7 @@ def js_func(a):
     now = datetime.datetime.now()
     
     # insert citycity to City for the test
-    City = 'mari'
+    City = '30'
 
     if not os.path.exists('python-data/%s' % today):
             print('This is the first experiment today. New repository coreated %s' % today)
@@ -71,6 +73,7 @@ def js_func(a):
 
     print( 'New file has created. Its name is ')
     print(fmt_name)
+    shutil.copyfile(fmt_name, "/home/pi/Desktop/Ultra-analysis-master/web/data.csv")
     print('    ')
 
     # commands necessary for Google Drive
@@ -85,9 +88,10 @@ def js_func(a):
     f.Upload()
 
     print('Completed uploading files')
-  
-
+    # serverUp()
+    print('Server localhost:8000 built.')
     sleep(1)
+   
     # expose and fire js function with argument "maririnrin"
     eel.my_javascript_function('%s' % fmt_name)
     
