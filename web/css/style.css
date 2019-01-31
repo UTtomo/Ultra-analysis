@@ -1,15 +1,18 @@
-<style>
+
 body{
   font-size: 16px;
-  background-color: rgb(20,20,20);
+  background-color: rgb(50,50,50);
 }
 header{
   text-align: center;
   font-size: 30px;
   color: rgb(200,200,200);
-  background-color: rgb(50,50,50);
+  background-color: rgb(20,20,20);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 footer{
+    margin-top: 10px;d
   background-color: rgb(50,50,50);
 }
 
@@ -22,6 +25,9 @@ section{
 }
 
 /* Home page */
+h1{
+    font-size: 23px;
+}
 .a_row{
 display: inline-block;
 vertical-align: bottom;
@@ -40,9 +46,25 @@ vertical-align: bottom;
   font-size: 100px;
   color: rgb(227, 36, 36);
 }
+
+.homebtn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #008c00;
+    background-color: #222;
+}
+
+/* ---------------------------------------------
+settings
+--------------------------------------------- */
+.w-text{
+    margin-bottom: 40px;
+}
 @charset "UTF-8";
 body {
-	background: #222;
 	color: #fff;
 	margin: 0;
 	padding: 0;
@@ -126,4 +148,3 @@ h2 {
         float: none;
     }
 }
-</style>

@@ -21,18 +21,22 @@ function drawBarChart(data) {
   // tmpLabels tmpData1 tmoData2をそれぞれcsvの1列2列3列ようの配列として用意
   var tmpLabels = [], tmpData1 = [], tmpData2 = [];
   
-
+// row が　data　のかずだけ繰り返しますよ
   for (var row in data) {
     tmpLabels.push(data[row][0])
     tmpData1.push(data[row][1])
     tmpData2.push(data[row][2])
   };
 
-  // 4)chart.jsで描画
+  // ctxにmyChartの機能を持たせる
   var ctx = document.getElementById("myChart");
+  // ctxの設定が
   var myChart = new Chart(ctx, {
+    // 線グラフ
     type: 'line',
+    // データの属性
     data: {
+      // 横軸のラベル
       labels: tmpLabels,
       datasets: [
         { label: "歪み", data: tmpData1, borderColor: "rgb(179,128,255)" },

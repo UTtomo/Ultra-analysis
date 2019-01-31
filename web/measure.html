@@ -1,53 +1,62 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Eel app</title>
+	<title> Impact Measurement System α </title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 	<script type="text/javascript" src="/eel.js"></script>
-	<script type="text/javascript">
-
-	// run a python script with asynchronously
+	<script type="text/javascript ">
+  
+	// 下のonclick=link3Click();のボタンがクリックされたら
 	function link3Click() {
+		// eel.(関数)とすることで、main.py内のlink3_click()を実行する
 		eel.link3_click();
 	}
 
-	// after all the staff have installed
+	// HTML要素が全て読み込まれたら
 	window.onload = function() {
 		caution = document.getElementById("caution");
 	}
-	// expose my_javascript_function to python script for interaction
-    eel.expose(my_javascript_function);
-		 
-		 // function contents is to show "hello maribo" in console that derived from main.py
-     function my_javascript_function(a){
-		   console.log("hello "+a);
-			 window.location.href = 'http://localhost:8000/index.html';
-			 console.log("index.html");
-     }
-  
+		
+	// measure.py内の計測スクリプトが終われば、この関数が呼ばれる。(measure.py 最後の行でこのファイル実行)
+  eel.expose(my_javascript_function);
+    // その中身は
+    function my_javascript_function(a){
+			// デバッグ用にmeasure.py内のfmt_nameをひょうじして
+			console.log("hello "+a);
+			// windowをグラフを描画するためのページindex.htmlに自動的に遷移させる
+			window.location.href = 'http://localhost:8000/index.html';
+			console.log("index.html");	 
+   }
 		</script>
 </head>
+
 
 <body>
 	<header> Ultrasonic Analyzer <br>
 	</header>
 
 <div class="container">
-	<a href="#" onclick="link3Click()">LinkLink</a>
+	<div class="homebtn">
 	<br>
+	<!-- 表示 -->
  <h1 id="caution"> Waiting for Pushing Button.....</h1>
   <br>
-
+		<!-- カウントダウンタイマーの箱を用意 54行当たりでカウントダウン専用のcount.jsをインクルードしている-->
     <div id="timer" class="cd"></div>
     <div class="controls">
-    <button id="start" onclick="hogehoge(style)">Start!</button>
+
+		<!-- id=start で　onclick="link3_click()"のボタンを用意　おされたら11行目あたりに飛ぶ -->
+		<button id="start" onclick="link3Click()">Start!</button><br>
+			<!-- Now Loading の箱を用意 -->
+		<iframe src="" id="ifr" width="450" height="250"></iframe>
     </div>
 
-
+		<!-- カウントダウンのjavascriptをインクルード　id=timerと紐づいている -->
 		<script type="text/javascript" src="js/count.js"></script>
 
-
+</div>
+<!-- homebuttonを設置 -->
   <a href="http://localhost:8000/main.html" class="homebtn">Home</a>
 </div>
 

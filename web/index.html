@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <script src="http://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
     <script src="js/mychart.js"></script>
     <script type="text/javascript" src="/eel.js"></script>
     <link rel="stylesheet" href="css/style.css">
-
+<!-- chart.js内のmainChart()をインクルード -->
     <script type="text/javascript">
     mainChart();
     </script>
@@ -15,9 +15,10 @@
 </head>
 <body>
     <h2>応力と歪み </h2>
-<!--ここにグラフが挿入されます-->
+
 <div style="center">
 <div style="width: 90%; height: auto;">
+    <!--ここにグラフが挿入されます-->
     <canvas id="myChart" style="width: 100%; height: auto;"></canvas>
     <a href="http://localhost:8000/main.html" class="homebtn">Home</a>
 </div>
