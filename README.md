@@ -1,2 +1,8 @@
-# csv-api
-using Raspberry pi, make csv files that show data of sensors. And upload the file to Google Drive 
+Raspberry Piを用いたアナログデータの可視化装置。
+以下の手順でアナログデータをディスプレイに表示します。
+
+０、GUIはHTML CSS JavaScriptで作成する。
+１、実験開始日時をファイル名とするCSVファイルを作成する。(python)
+２、アナログデータをpythonで0.01秒ごとに取得し、計測データを上記ファイルに1セルずつに入力する。(python)
+３、Chart.jsでグラフを描画する。作成したCSVファイルを一行ずつデータを取り込み、値をグラフにプロットする(python、javascript)
+
